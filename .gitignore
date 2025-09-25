@@ -1,0 +1,10 @@
+*.exe
+*.out
+a.out
+solution
+bfs_exe
+*.o
+*.obj
+*.tmp
+.vscode/
+*.sublime-workspace

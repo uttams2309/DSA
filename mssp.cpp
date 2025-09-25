@@ -34,13 +34,13 @@ void multi_bfs(){
 	}
 	while(!q.empty()){
 		int x = q.front().F, y = q.front().S;
-		vis[x][y]=1;
+		
 		q.pop();
 		for(int k=0;k<4;k++){
 			int nx = x + dx[k], ny = y + dy[k];
 			if(is_valid(nx, ny)){
-				  if(vis[nx][ny]==-1 or dis_mons[nx][ny]==1e9)
-					q.push({nx, ny});
+				  if(vis[nx][ny]==-1)
+					{ q.push({nx, ny});}
 			
 					dis_mons[nx][ny] = min(dis_mons[nx][ny], dis_mons[x][y]+1);
 				
@@ -60,7 +60,7 @@ void bfs(state node){
 		for(int k=0;k<4;k++){
 			int nx = x+dx[k], ny = y+dy[k];
 			if(is_valid(nx, ny)){
-				if(vis[nx][ny]==-1 or dis_pers[nx][ny]==1e9){
+				if(vis[nx][ny]==-1){
 					q.push({nx, ny});
 				}
 					
